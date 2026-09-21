@@ -58,12 +58,11 @@ v38 — шапка прозрачная вверху страницы, стек�
 - На How it works для 8 из 9 пунктов бокового меню стоят дашборды с главной (`feature-*.png`), точные варианты из компонент-сета Figma 21:32611 не выгружены (лимит API).
 
 ## Git
-Локальный репозиторий инициализирован, коммит есть. Remote: https://github.com/valerietolk/finstarter (пустой, push не прошёл — нужен интерактивный вход GitHub).
-Чтобы дожать: в терминале в этой папке `git push -u origin main`, выбрать вход через браузер.
+Репозиторий в этой папке (`finstarter-v29`), ветка `main`, remote `origin` = https://github.com/valerietolk/finstarter (приватный). Первый push — v38, 21.09.2026.
+Вход в GitHub сохранён в Git Credential Manager (аккаунт valerietolk), дальше `git add -A && git commit && git push` работает без логина.
+`backups/` в `.gitignore` (20 МБ снимков), `tools/figma_token.txt` — тоже (токен Figma никогда не коммитить).
 На Mac git не запускается без Xcode Command Line Tools (`xcode-select --install`). Локальный просмотр: `cd site && python3 -m http.server 8765` (Mac) или `tools/serve.ps1` (Windows).
-`.claude/launch.json` сейчас настроен под Windows (`tools/serve.ps1`, относительный путь; на Mac вернуть `bash -c "cd <abs>/site && python3 -m http.server 8765"`);
-из `~/Downloads` preview приложения Claude не стартует (нет доступа к папке) — либо перенести проект, либо поднять сервер вручную в терминале.
-Папка `finstarter-v24` скопирована без `.git` и `backups/` — репозиторий и бэкапы остались в предыдущей папке проекта.
+`.claude/launch.json` настроен под Windows (`tools/serve.ps1`, относительный путь; на Mac вернуть `bash -c "cd <abs>/site && python3 -m http.server 8765"`).
 
 ## Бэкапы
-В этой папке: `backups/finstarter-v30-before-typography-cleanup` — перед чисткой типографики. В предыдущей папке проекта: `-v5-backup` — чистая вёрстка по Figma; `-v11-desktop-backup` — десктоп до адаптива; `-v14-backup` — перед How it works.
+В этой папке (не в git): `backups/finstarter-v30-before-typography-cleanup` — перед чисткой типографики; `-v34-hero-scene` — до параллакса; `-v35-before-shapes` — до шейпов. В предыдущей папке проекта: `-v5-backup` — чистая вёрстка по Figma; `-v11-desktop-backup` — десктоп до адаптива; `-v14-backup` — перед How it works.
